@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- z准备好一个容器 -->
+    <div id ="root">
+            <h1>hello,{{name}}
+            </h1>
+            <h1>指令语法</h1>
+            <a :href="asd">cesss</a>
+    </div>
+    <h2 id ="root2">{{nihao}}</h2>
+</body>
+<script type="text/javascript" >
+         new Vue({
+            el:'#root',
+            data:{
+                name:"wuhao",
+                asd:"https://cn.vuejs.org/api/application.html#app-provide"
+            }
+        })
+        new Vue({
+            el:'#root2',
+            data:{
+                nihao:"asdasdas"
+            }
+        })
+
+</script>
+</html> 

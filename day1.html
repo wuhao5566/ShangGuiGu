@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let a=16 + "Volvo";
+        console.log(a);
+
+        //使用其他方式来判断数组
+        var cars=new Array();
+        cars[0]="Saab";
+        cars[1]="Volvo";
+        cars[2]="BMW";
+        // 判断是否支持该方法
+        if (Array.isArray) {
+            if(Array.isArray(cars)) {
+                document.write("该对象是一个数组。") ;
+            }
+        }
+       //使用 instanceof 操作符
+        if (cars instanceof Array) {
+            document.write("该对象是一个数组。") ;
+        }
+
+        var carname="Volvo";
+        var carname;
+        console.log(carname);
+            function varTest() {
+            var x = 1;
+            if (true) {
+                var x = 2;       // 同样的变量!
+                console.log(x);  // 2
+            }
+            console.log(x);  // 2
+        }
+
+            function letTest() {
+                let x = 1;
+                if (true) {
+                    let x = 2;       // 不同的变量    
+                    console.log(x);  // 2  
+                }
+                console.log(x);  // 1
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

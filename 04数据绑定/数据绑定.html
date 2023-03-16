@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据绑定</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- z准备好一个容器 v-model只能应用于表单类元素上-->
+    <div id ="root">
+           单项数据绑定<input type="text" v-bind:value = "value"><br/>
+           双向数据绑定<input type="text" v-model:value = "value">
+
+           <!-- 简写  双向数据绑定<input type="text" v-model = "value"> -->
+    </div>
+    <h2 id ="root2">{{nihao}}</h2>
+</body>
+<script type="text/javascript" >
+       const v =  new Vue({
+            data:{
+                value:"wuhao",
+                value1:"httpse"
+            }
+        })
+        v.$mount('#root');
+
+
+        new Vue({
+            el:'#root2',
+            // 对象的对象样式
+            // data:{
+            //     nihao:"wuhao1111 ",
+            //     value1:"httpse"
+            // }
+
+
+            // 函数式  function可以省略
+            data: function(){
+                return{
+                    nihao:"asd"
+                }
+            }
+
+        });
+       
+        
+</script>
+</html> 
